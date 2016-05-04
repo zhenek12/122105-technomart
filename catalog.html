@@ -8,26 +8,29 @@
      <header class="main-header">
 	  <div class="container">
         <div class="header-top">
-          <a class="login" href="/">
-		    <img src="http://placehold.it/186x36" width="186" height="36" alt="Техномарт">
+          <a class="logo" href="/">
+		    <img src="img/logo.png" width="220" height="47" alt="Техномарт">
 		  </a>
-		  <img src="http://placehold.it/15x15" width="15" height="15" alt="Поиск">
-		  <form>
-            <input type="search" name="input-search" placeholder="">
-          </form>
-		  <img src="http://placehold.it/15x15" width="15" height="15" alt="Закладки">
-		  <p>Закладки: 0</p>	
-		  <img src="http://placehold.it/15x15" width="15" height="15" alt="Корзина">
-		  <p>Корзина: 0</p>	
+		  <div class="serch">
+		    <form>
+              <input type="search" name="input-search" placeholder="Поиск">
+            </form>
+	      </div> 
+		  <div class="bookmarks">
+		    Закладки: 0
+		  </div>
+	      <div class="cart">		
+		    Корзина: 10	
+		  </div>	
 		  <a class="checkout" href="/">Оформить заказ</a>
         </div>
 		<div class="header-center">
 		  <div class="header-center-left">
-		    <p>
+		    <h1>
 		      Интернет магазин<br>
 			  строительных материалов<br>
 			  и инструментов для ремонта	
-			</p>	
+			</h1>	
 		  </div>
 		  <div class="header-center-center">
 		    <div class="header-tel">
@@ -84,12 +87,18 @@
 	  
 	  <div class="product-selection">
 	    <form class="characteristics-form" action="#" method="get">  	  
-	      <h3>фильтр:</h3>
-		  <h2>цена:</h2>
+	      <div class="characteristics-filter"> 
+		    фильтр: 
+		  </div> 
+		  <div class="characteristics-price">
+			цена:
+		  </div>	
 	      <input type="range" min="0" max="40000" step="1" value="30000">
 		  <span>0</span> - <span>30000</span>
 		  <hr>
-		  <h2>производители:</h2>  
+		  <div class="characteristics-vendors">	
+		    производители: 
+		  </div>		  
 		  <label>  
             bosch <input type="checkbox" name="producers[]" value="1" checked>
           </label>
@@ -105,8 +114,10 @@
           <label>  
             hitachi <input type="checkbox" name="producers[]" value="5">
           </label>	
-	      <hr>		
-		  <h2>питание:</h2>
+	      <hr>
+		  <div class="characteristics-power"> 	
+		    питание:
+		  </div>	  
 		  <label>  
             аккумуляторные <input type="radio" name="power" value="battery" checked>
           </label>
@@ -120,37 +131,37 @@
 	  
 	    <div class="sorting">
 		   <div class="left-alignment">сортировка</div>
-		   <div class="right-alignment">по цене</div>
-		   <div class="right-alignment">по типу</div>
-		   <div class="right-alignment">по функционалу</div>
 		   <div class="right-alignment">
-		     <img src="http://placehold.it/15x15" width="15" height="15" alt="вверх"><img src="http://placehold.it/15x15" width="15" height="15" alt="вниз">	  
+		     <a href="#">по цене</a> 
+			 <a href="#">по типу</a> 
+			 <a href="#">по функционалу</a>
+		     <img src="http://placehold.it/15x15" width="15" height="15" alt="вверх"><img src="http://placehold.it/15x15" width="15" height="15" alt="вниз">  
 		   </div>
 		</div>
 
 		<div class="product-cards">
 		  <article class="item">
-		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 3000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 3000</H3>
+		    <a href="#"><img src="img/bosch_bfg_3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112"></a>
+			<h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
 			<div class="old-price">
-			  <h4>22500 Р.</h4>
+			  22500 Р.
 			</div>
 			<div class="price">
-		      <h4>15500 Р.</h4>  
+		      15500 Р.
 			</div>
 	      </article>
 		  <article class="item">
-		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 6000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 6000</H3>
+		    <a href="#"><img src="img/bosch_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128"></a>
+			<h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
 			<div class="old-price">
-			 <H4>30500 Р.</H4>
+			 30500 Р.
 			</div>		  
 			<div class="price">
-		      <h4>25500 Р.</h4>  
+		      25500 Р.
 			</div>
 	      </article>
 		  <article class="item new">
-		    <div class="Add-to-cart">
+		    <div class="add-to-cart">
 			  <a href="#win1" class="button-buy">купить</a>
 		      <a href="#win2" class="button-bookmarks">в закладки</a>
 			  <a href="#x" class="overlay" id="win1"></a>
@@ -164,72 +175,72 @@
                   <a class="close" title="Закрыть" href="#close"></a>
                 </div>
 			</div> 
-            <H3>Перфоратор BOSCH BFG 2000</H3>
+            <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
 			<div class="old-price">
-			  <H4></H4>
+			 
 			</div>	  
 			<div class="price">
-		      <h4>12500 Р.</h4>  
+		      12500 Р.
 			</div>
 	      </article>
 		  <article class="item">
-		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 3000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 3000</H3>
+		    <a href="#"><img src="img/bosch_bfg_3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112"></a>
+			<h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
 			<div class="old-price">
-			  <H4>22500 Р.</H4>
+			  22500 Р.
 			</div>	  
 			<div class="price">
-		      <h4>15500 Р.</h4>  
+		      15500 Р.  
 			</div>
 	      </article>
 	      <article class="item new">
-		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 6000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 3000</H3>
+		    <a href="#"><img src="img/bosch_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128"></a>
+            <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
 			<div class="old-price">
-			  <H4>30500 Р.</H4>
+			  30500 Р.
 			</div>	  
 			<div class="price">
-		      <h4>25500 Р.</h4>  
+		      25500 Р. 
 			</div>
 	      </article>
 		  <article class="item">
 		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 2000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 2000</H3>
+            <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
 			<div class="old-price">
-			  <H4></H4>
+			  
 			</div>	  
 			<div class="price">
-		      <h4>12500 Р.</h4>  
+		      12500 Р.
 			</div>
 	      </article>
 		  <article class="item new">
-		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 3000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 3000</H3>
+		    <a href="#"><img src="img/bosch_bfg_2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112"></a>
+            <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
 			<div class="old-price">
-			  <H4>22500 Р.</H4>
+			  22500 Р.
 			</div>	  
 			<div class="price">
-		      <h4>15500 Р.</h4>  
+		      15500 Р.  
 			</div>
 	      </article>
 		  <article class="item">
-		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 6000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 6000</H3>
+		    <a href="#"><img src="img/bosch_bfg_6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128"></a>
+            <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
 			<div class="old-price">
-			  <H4>30500 Р.</H4>
+			  30500 Р.
 			</div>	  
 			<div class="price">
-		      <h4>25500 Р.</h4>  
+		      25500 Р.  
 			</div>
 	      </article>	
 		  <article class="item new">
-		    <a href="#"><img src="http://placehold.it/180x140" alt="Перфоратор BOSCH BFG 2000" width="180" height="140"></a>
-            <H3>Перфоратор BOSCH BFG 2000</H3>
+		    <a href="#"><img src="img/bosch_bfg_2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112"></a>
+            <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
 			<div class="old-price">
-			  <H4></H4>
+			 
 			</div>	  
 			<div class="price">
-		      <h4>12500 Р.</h4>  
+		      12500 Р.  
 			</div>
 	      </article>	
 	
@@ -253,7 +264,7 @@
 	<footer>
 	  <div class="footer-top">
 	    <a class="login-footer" href="/">
-		  <img src="http://placehold.it/185x55" width="185" height="55" alt="Техномарт">
+		  <img src="img/logo_futer.png" width="220" height="68" alt="Техномарт">
 	  	</a>
 		<nav class="footer-navigation-top">
 		  <ul>
